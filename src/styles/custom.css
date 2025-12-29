@@ -1,0 +1,134 @@
+/* =========================================================
+   0) Fonts (Google Fonts)
+   ========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap');
+
+
+/* =========================================================
+   1) Theme Variables (Starlight CSS variables)
+   - フォント・アクセントカラーなど全体の基礎設定
+   ========================================================= */
+:root {
+  /* Font: 本文・UI */
+  --sl-font-system: 'Zen Kaku Gothic New', system-ui, sans-serif;
+
+  /* Font: 見出し */
+  --sl-font-heading: 'M PLUS Rounded 1c', sans-serif;
+
+  /* Accent: ゆめかわピンク */
+  --sl-color-accent: #ff5ca8;
+  --sl-color-accent-high: #ff2f94;
+  --sl-color-accent-low: #ffd1e6;
+}
+
+
+/* =========================================================
+   2) Site Background
+   - 背景を画像にする（グリッドや柄など）
+   ========================================================= */
+body {
+  background-image: url("/public/alt/bk.jpg");
+  background-repeat: repeat;
+}
+
+/* =========================================================
+   3) Main Content "Card"
+   - 背景が柄でも本文が読みやすいように、本文エリアを白カードにする
+   ========================================================= */
+/* .sl-container {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 24px;
+  padding: 2rem;
+} */
+
+
+/* =========================================================
+   4) Header: Site Title (左上ロゴ)
+   - Starlightは .sl-site-title が基本
+   - ぷにちゃんのCSSは .site-title だったので両方対応しておくにゃ
+   ========================================================= */
+.sl-site-title,
+.site-title {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 0.06em;
+
+  color: #ff5ca8;
+  text-decoration: none;
+
+  transform: translateY(-1px) scale(1.03);
+  text-shadow: 0 4px 12px rgba(255, 92, 168, 0.45);
+}
+
+.sl-site-title:hover,
+.site-title:hover {
+  transform: translateX(3px) scale(1.03);
+}
+
+
+/* =========================================================
+   5) Page Title (ページ上部の大見出し)
+   ========================================================= */
+#_top {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #ff5ca8;
+  font-size: 2.2rem;
+  margin-bottom: 0.6em;
+}
+
+
+/* =========================================================
+   6) Markdown Headings (本文内 h1/h2/h3)
+   ========================================================= */
+.sl-markdown-content h1,
+.sl-markdown-content h2,
+.sl-markdown-content h3 {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+}
+
+/* ページタイトル下の説明文 */
+.sl-description {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+
+  color: #666;
+  opacity: 0.9;
+}
+
+/* =========================================================
+   7) Images (本文中の画像をかわいく)
+   ========================================================= */
+.sl-markdown-content img {
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   8) Gallery (イラストログ用)
+   ========================================================= */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.gallery figure {
+  margin: 0;
+  padding: 12px;
+  border-radius: 18px;
+  background: rgba(255, 92, 168, 0.08);
+}
+
+.gallery figcaption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+

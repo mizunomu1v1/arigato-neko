@@ -4,23 +4,31 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://mizunomu1v1.github.io/arigato-neko/',
+	base: '/arigato-neko/',
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'ありがとうネコライフ',
+			// logo: {src: './src/assets/st33333.jpeg',},
+			customCss: ['./src/styles/custom.css'],
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
 			sidebar: [
-				{
-					label: 'Guides',
+				{ label: 'ホーム', slug: '' },
+			 	{ label: 'ゆる技術', autogenerate: { directory: 'yuru-tech' } },
+			 	{ label: 'ゲーム', 
 					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],
+						// { label: 'ゲームのたなおろし', slug: 'games' }, 
+						{ label: 'プレイ日記', autogenerate: { directory: 'games/diary' } },
+						{ label: 'ゲームを語る', autogenerate: { directory: 'games/talk' } },
+					], 
 				},
-				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+			 	{ label: '記録', 
+					items: [
+						{ label: 'ライブ年表', autogenerate: { directory: 'record/live' } },
+						{ label: '日々', autogenerate: { directory: 'record/day' } },
+					], 
 				},
-			],
+			 ],
 		}),
 	],
 });
