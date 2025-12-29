@@ -11,6 +11,7 @@ export default defineConfig({
 			title: 'ありがとうネコライフ',
 			// logo: {src: './src/assets/st33333.jpeg',},
 			customCss: ['./src/styles/custom.css'],
+			pagination: false, 
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
 			sidebar: [
 				{ label: 'ホーム', slug: '' },
