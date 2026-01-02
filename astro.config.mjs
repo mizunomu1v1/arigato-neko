@@ -8,8 +8,8 @@ export default defineConfig({
 	base: '/arigato-neko/',
 	integrations: [
 		starlight({
-			title: 'ありがとうネコライフ',
-			// logo: {src: './src/assets/st33333.jpeg',},
+			title: 'ありがとネコライフ',
+			favicon: './src/assets/favicon_20260102.png',
 			customCss: ['./src/styles/custom.css'],
 			pagination: false, 
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
